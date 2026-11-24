@@ -1,1 +1,16 @@
-
+node_modules
+npm-debug.log*
+data
+*.db
+*.db-wal
+*.db-shm
+.git
+.gitignore
+.env
+.env.*
+Dockerfile
+.dockerignore
+*.md
+.vscode
+.idea
+.DS_Store
