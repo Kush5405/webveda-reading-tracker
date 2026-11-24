@@ -52,7 +52,7 @@ npm start              # http://localhost:3000
 node server/test-api.js   # or: npm test
 ```
 
-Place a `welcome.mp4` in `public/` for the video player (it isn't included in the repo).
+A sample welcome.mp4 is already included in public/ so the video player works out of the box.
 
 The database defaults to `./data/tracker.db` (the folder is created automatically). Override with `DB_PATH` and `PORT`.
 
