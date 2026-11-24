@@ -1,6 +1,6 @@
 # WebVeda Reading Challenge Tracker
 
-**Live demo:** https://YOUR-APP-NAME.onrender.com *(placeholder: replace after deploying)*
+**Live demo:** (https://webveda-reading-tracker.onrender.com/) 
 
 A small full-stack app for tracking a reading challenge. Watch a welcome video (the playback position is remembered across reloads) and tick off books from a Fiction list and a Nonfiction list. All state is stored on the server.
 
