@@ -1,1 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WebVeda Reading Challenge Tracker</title>
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#reading-heading">Skip to reading lists</a>
 
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">WebVeda</p>
+      <h1>Reading Challenge Tracker</h1>
+      <p class="lead">Watch the welcome video, then tick off each book as you finish it.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card" aria-labelledby="video-heading">
+      <h2 id="video-heading">Welcome video</h2>
+      <video id="welcome-video" src="/welcome.mp4" controls preload="metadata">
+        Your browser doesn’t support embedded video.
+      </video>
+      <div class="video-meta">
+        <span id="video-status" class="pill" role="status" aria-live="polite" hidden></span>
+      </div>
+      <div id="video-error" class="alert" role="alert" hidden>
+        <p id="video-error-text"></p>
+        <button id="video-error-retry" type="button" class="btn" hidden>Try again</button>
+      </div>
+    </section>
+
+    <section aria-labelledby="reading-heading">
+      <h2 id="reading-heading" class="section-title">Your reading lists</h2>
+
+      <div id="books-error" class="alert" role="alert" hidden>
+        <p id="books-error-text"></p>
+        <button id="books-retry" type="button" class="btn">Retry</button>
+      </div>
+
+      <div id="books-grid" class="grid" aria-busy="true">
+        <section class="card" aria-labelledby="fiction-heading">
+          <div class="card-head">
+            <h3 id="fiction-heading">Fiction</h3>
+            <span id="fiction-count" class="badge" aria-live="polite">– of – read</span>
+          </div>
+          <ul id="fiction-list" class="book-list"></ul>
+        </section>
+
+        <section class="card" aria-labelledby="nonfiction-heading">
+          <div class="card-head">
+            <h3 id="nonfiction-heading">Nonfiction</h3>
+            <span id="nonfiction-count" class="badge" aria-live="polite">– of – read</span>
+          </div>
+          <ul id="nonfiction-list" class="book-list"></ul>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+</body>
+</html>
