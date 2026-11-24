@@ -11,7 +11,7 @@ app.use(express.json());
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/api', routes);
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
+app.use(express.static(path.join(__dirname, '..', '/public')));
 
 // Unknown API routes -> JSON 404
 app.use('/api', (req, res) => res.status(404).json({ error: 'Not found' }));
